@@ -20,7 +20,7 @@ def genMatrix2(size, value):
 def matrixMultiply(matrix1,matrix2):
     #Fixed matrixMultiply
     matrix = genMatrix2(128,0)
-    with pymp.Parallel() as p:#Added pymp to make matrix multiplier run in parallel.
+    with pymp.Parallel() as p:#Added pymp to make matrix multiplier run in parallel. To change threads just type it inside system call
         for i in range(len(matrix1)):
             for j in range(len(matrix2[0])):
                 for k in range(len(matrix2)):
